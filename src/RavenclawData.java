@@ -1,8 +1,11 @@
 public class RavenclawData extends HogwartsPersonData{
-    private int mind;
-    private int wisdom;
-    private int wit;
-    private int creativity;
+
+    String nameList = "Когтевран";
+
+    private final int mind;
+    private final int wisdom;
+    private final int wit;
+    private final int creativity;
 
 
     public RavenclawData(String name, int forceMagic, int transgression, int mind, int wisdom, int wit, int creativity) {
@@ -27,5 +30,25 @@ public class RavenclawData extends HogwartsPersonData{
 
     public int getCreativity() {
         return creativity;
+    }
+
+    public String getNameList() {
+        return nameList;
+    }
+
+    public int getSumParametrsStudent(){
+        return getCreativity() + getMind() + getWisdom() + getWit();
+    }
+
+    @Override
+    public String toString() {
+        return "Факультет: Когтевран, " + "Имя: "
+                + super.getName() + ", Магическая сила: "
+                + super.getForceMagic() + ", Трансгрессия: "
+                + super.getTransgression() +
+                " mind = " + mind +
+                ", wisdom = " + wisdom +
+                ", wit = " + wit +
+                ", creativity = " + creativity + ".";
     }
 }

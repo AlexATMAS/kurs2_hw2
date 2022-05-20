@@ -1,8 +1,10 @@
 public class HufflepuffData extends HogwartsPersonData{
 
-    private int diligence;
-    private int loyalty;
-    private int honest;
+    String nameList = "Пуфиндуй";
+
+    private final int diligence;
+    private final int loyalty;
+    private final int honest;
 
     public HufflepuffData(String name, int forceMagic, int transgression, int diligence, int loyalty, int honest) {
         super(name, forceMagic, transgression);
@@ -21,5 +23,24 @@ public class HufflepuffData extends HogwartsPersonData{
 
     public int getHonest() {
         return honest;
+    }
+
+    public String getNameList() {
+        return nameList;
+    }
+
+    public int getSumParametrsStudent(){
+        return getDiligence() + getHonest() + getLoyalty();
+    }
+
+    @Override
+    public String toString() {
+        return "Факультет: Пуффендуй, " + "Имя: "
+                + super.getName() + ", Магическая сила: "
+                + super.getForceMagic() + ", Трансгрессия: "
+                + super.getTransgression() +
+                ", diligence = " + diligence +
+                ", loyalty = " + loyalty +
+                ", honest = " + honest + ".";
     }
 }

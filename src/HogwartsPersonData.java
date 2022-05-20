@@ -1,8 +1,10 @@
 public class HogwartsPersonData {
 
-    private String name;
-    private int forceMagic;
-    private int transgression;
+    String nameList = "Ученик школы";
+
+    private final String name;
+    private final int forceMagic;
+    private final int transgression;
 
 
 
@@ -22,5 +24,20 @@ public class HogwartsPersonData {
 
     public int getTransgression() {
         return transgression;
+    }
+    public int getSumParametrsStudent(){
+        return getForceMagic() + getTransgression();
+    }
+
+    public String getNameList() {
+        return nameList;
+    }
+
+    @Override
+    public String toString() {
+        return nameList +
+                ": Имя: " + name +
+                ", Магия: " + forceMagic +
+                ", Трансгрессия: " + transgression;
     }
 }

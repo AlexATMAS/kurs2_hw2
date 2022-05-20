@@ -1,7 +1,9 @@
 public class GryffindorData extends HogwartsPersonData {
-    private int nobility;
-    private int honor;
-    private int bravery;
+    String nameList = "Грифиндор";
+
+    private final int nobility;
+    private final int honor;
+    private final int bravery;
 
 
     public GryffindorData(String name, int forceMagic,int transgression, int nobility, int honor, int bravery) {
@@ -21,5 +23,26 @@ public class GryffindorData extends HogwartsPersonData {
 
     public int getBravery() {
         return bravery;
+    }
+
+
+
+    public int getSumParametrsStudent(){
+        return getBravery() + getHonor() + getNobility();
+    }
+
+    public String getNameList() {
+        return nameList;
+    }
+
+    @Override
+    public String toString() {
+        return  "Факультет: Грифиндор, " + "Имя: "
+                + super.getName() + ", Магическая сила: "
+                + super.getForceMagic() + ", Трансгрессия: "
+                + super.getTransgression() +
+                ", Nobility = " + nobility +
+                ", Honor = " + honor +
+                ", Bravery = " + bravery + ".";
     }
 }
